@@ -1,0 +1,31 @@
+<?php
+    require_once $_SERVER['DOCUMENT_ROOT'].'/Admin/Connect/connectDatabase.php';
+    class Admin_CommentModel{
+       private $db = null;
+
+       public function __construct(){
+           $this->db = (new Database())->getConnection();
+       }
+
+       public function showComment($limit,$offset){
+        $sql = "SELECT * FROM comment LIMIT $limit OFFSET $offset";
+        $result = $this->db->query($sql);
+        return $result;
+       }
+        public function getCount(){
+            $sql = "SELECT COUNT(*) as total FROM comment";
+            $result = $this->db->query($sql);
+            return $result;
+        } 
+        public function DeleteComment($id){
+            $sql = "DELETE FROM comment WHERE CmtID = $id";
+            $result = $this->db->query($sql);
+            return $result;
+        }
+        public function UpdateComment($id){
+            $sql = "UPDATE comment SET Status = 1 WHERE CmtID = $id";
+            $result = $this->db->query($sql);
+            return $result;
+        }
+    }
+?>
