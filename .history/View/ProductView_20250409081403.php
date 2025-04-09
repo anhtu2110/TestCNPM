@@ -1,5 +1,5 @@
 <?php
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/MyHouseDecor/Controller/ProductController.php';
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/TestCNPM/Controller/ProductController.php';
 	$controller = new ProductController();
 	$result = $controller->getProductController();
 	$count = 0;

@@ -1,5 +1,5 @@
 <?php
-require_once '../Controller/BestSellerController.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/TestCNPM/Controller/BestSellerController.php';
 $getdata = new BestSellerController();
 $getItems = $getdata->DisplayBestSeller();
 ?>
