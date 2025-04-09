@@ -2,14 +2,12 @@
     <div class="container-fluid col-md-12">
         <ul class="nav">
             <?php
-            // require_once('./Controller/MenuController.php');
-            require_once($_SERVER['DOCUMENT_ROOT'].'/TestCNPM/Controller/MenuController.php');
-
+            require_once('./Controller/MenuController.php');
 
             $controller = new MenuController();
             $dropdownItems = $controller->displayMenu();
 
-            // require_once('./View/MenuView.php');
+            require_once('../View/MenuView.php');
             ?>
             <?php foreach ($dropdownItems as $menuItem) : ?>
             <li class="nav-item" id="<?php echo isset($menuItem['MenuID']) ? $menuItem['MenuID'] : ''; ?>">

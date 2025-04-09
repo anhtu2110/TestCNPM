@@ -2,9 +2,7 @@
     <div class="container-fluid col-md-12">
         <ul class="nav">
             <?php
-            // require_once('./Controller/MenuController.php');
-            require_once($_SERVER['DOCUMENT_ROOT'].'/TestCNPM/Controller/MenuController.php');
-
+            require_once('./Controller/MenuController.php');
 
             $controller = new MenuController();
             $dropdownItems = $controller->displayMenu();
