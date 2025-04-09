@@ -39,15 +39,16 @@
        <div class="container-fluid">
            <div class="row d-flex align-items-center">
                <div class="col-md-8 wow slideInDown">
-                   <p><i class="fa-solid fa-location-dot"></i> 111 Trieu Khuc, Quan Thanh Xua, Ha Noi</p>
+                   <p><i class="fa-solid fa-location-dot"></i> 111 Trieu Khuc, Quan Thanh Xuan, Ha Noi</p>
                    <p><i class="fa-solid fa-phone"></i> +84 382 752 110</p>
                    <p><i class="fa-solid fa-envelope"></i> daotu2110@gmail.com</p>
                </div>
                <div class="col-md-4 wow slideInDown" id="n1">
-                   <a href="https://www.facebook.com/tranvanhuyads.2022"><i class="fa-brands fa-facebook"></i></a>
-                   <a href="https://www.twitch.tv/"><i class="fa-brands fa-twitter"></i></a>
-                   <a href="https://tymfund.org.vn/"><i class="fa-solid fa-heart"></i></a>
-                   <a href="https://coccoc.com/search?query=Instagram"><i class="fa-solid fa-circle-info"></i></a>
+                   <a href="https://www.facebook.com/profile.php?id=61559644528431"><i
+                           class="fa-brands fa-facebook"></i></a>
+                   <a href="https://x.com/?lang=vi"><i class="fa-brands fa-twitter"></i></a>
+                   <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                   <a href="https://web.telegram.org/"><i class="fa-brands fa-telegram"></i></a>
                </div>
            </div>
        </div>
@@ -63,7 +64,8 @@
                    </div>
                </div>
                <?php
-                require_once './View/MenuView.php';
+                require_once $_SERVER['DOCUMENT_ROOT'].'/TestCNPM/View/MenuView.php';
+
                 ?>
                <div class="col-md-2 d-flex align-items-center">
                    <div class="container-fluid loginne wow slideInDown">
@@ -129,7 +131,7 @@
                <div class="collapse navbar-collapse" id="navbarNavDropdown">
                    <ul class="navbar-nav mx-auto">
                        <?php
-                require_once './Controller/MenuController.php';
+                require_once $_SERVER['DOCUMENT_ROOT'].'/TestCNPM/Controller/MenuController.php';
                 $controller = new MenuController();
                 $dropdownItems = $controller->displayMenu();
                 foreach ($dropdownItems as $menuItem):

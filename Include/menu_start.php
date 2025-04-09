@@ -64,7 +64,8 @@
                    </div>
                </div>
                <?php
-                require_once './View/MenuView.php';
+                require_once $_SERVER['DOCUMENT_ROOT'].'/TestCNPM/View/MenuView.php';
+
                 ?>
                <div class="col-md-2 d-flex align-items-center">
                    <div class="container-fluid loginne wow slideInDown">
@@ -130,7 +131,7 @@
                <div class="collapse navbar-collapse" id="navbarNavDropdown">
                    <ul class="navbar-nav mx-auto">
                        <?php
-                require_once './Controller/MenuController.php';
+                require_once $_SERVER['DOCUMENT_ROOT'].'/TestCNPM/Controller/MenuController.php';
                 $controller = new MenuController();
                 $dropdownItems = $controller->displayMenu();
                 foreach ($dropdownItems as $menuItem):
