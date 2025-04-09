@@ -1,8 +1,8 @@
 <?php
     class Database{
         private $localhost = 'localhost';
-        private $username = 'cnpm';
-        private $password = '123456';
+        private $username = 'root';
+        private $password = '';
         private $db = 'dacn';
         private $conn = null;
 
